@@ -59,11 +59,11 @@ class _MyAppState extends State<MyApp> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Image.network(
-                      "https://placehold.it/50x50",
+                      userProfile['picture']['data']['url'],
                       height: 50,
                       width: 50,
                     ),
-                    Text(""),
+                    Text(userProfile['name'],),
                     OutlineButton(
                       child: Text("Logout"),
                       onPressed: () {
