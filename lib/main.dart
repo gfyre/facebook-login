@@ -42,7 +42,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   _logout() async {
-    await facebookLogin.logOut();
+    facebookLogin.logOut();
+    setState(() {
+      _isLoggedIn = false;
+    });
   }
 
   @override
